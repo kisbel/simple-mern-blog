@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Article from './components/articles/Article';
@@ -6,12 +6,6 @@ import Articles from './components/articles/Articles';
 import ArticleForm from './components/articles/ArticleForm';
 
 const App = () => {
-  useEffect(() => {
-    console.log('about to fetch');
-    fetch('/ping')
-      .then(res => res.json())
-      .then(res => console.log('res', res));
-  }, []);
 
   return (
     <div>

@@ -8,8 +8,6 @@ server.use(express.json());
 // //to correctly get the information from submissions
 // server.use(express.urlencoded({ extended: false }))
 
-server.get('/ping', (req, res) => res.send({ ping: 'pong' }));
-
 const articleRouter = require('./article/router');
 
 server.use('/articles', articleRouter);
